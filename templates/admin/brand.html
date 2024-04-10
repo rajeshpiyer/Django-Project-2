@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+    <div class="table-container">
+    <h1>Brand List</h1>
+    <br><a href="{% url 'store:admin_add_brand' %}">Create new Brand</a><br><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for brand in brands %}
+            <tr>
+                <td>{{ brand.id }}</td>
+                <td>{{ brand.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {% endblock content %}

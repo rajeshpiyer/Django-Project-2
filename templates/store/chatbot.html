@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+    <style>
+        .chatbot {
+            display: block;
+            margin-left: 500px;
+        }
+
+        iframe {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Change the color of the chatbot text */
+        .chat-container p {
+            color: #333;
+        }
+
+        /* Change the color of the chatbot buttons */
+        .df-button {
+            background-color: #4285f4;
+            color: #fff;    
+        }
+
+        /* Change the border radius of the chatbot buttons */
+        .df-button {
+            border-radius: 20px;
+        }
+
+        /* Change the hover effect of the chatbot buttons */
+        .df-button:hover {
+            background-color: #3367d6;
+        }
+        
+    </style>
+    <div class="chatbot">
+        <iframe
+        width="500"
+        height="500"
+        src="https://console.dialogflow.com/api-client/demo/embedded/a2b49fd2-1dcf-4b04-8d11-7c6eaced0e4e">
+        </iframe>
+    </div>
+    {% endblock content %}

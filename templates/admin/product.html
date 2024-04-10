@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+    <div class="table-container">
+    <h1>Product List</h1>
+    <br><a href="{% url 'store:admin_add_product' %}">Create new Product</a><br><br>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>SKU</th>
+                <th>Short Description</th>
+                <th>Detail Description</th>
+                <th>Product Image</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Is Active</th>
+                <th>Is Featured</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.slug }}</td>
+                <td>{{ product.sku }}</td>
+                <td>{{ product.short_description }}</td>
+                <td>{{ product.detail_description }}</td>
+                <td><img src="{{ product.product_image.url }}" alt="{{ product.title }}" height="50"></td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.is_active }}</td>
+                <td>{{ product.is_featured }}</td>
+                <td>{{ product.created_at }}</td>
+                <td>{{ product.updated_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {% endblock content %}

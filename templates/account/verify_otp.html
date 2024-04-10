@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+
+      <div class="container py-5">
+        <div class="col-md-8 offset-2">
+
+        <h1 class="mb-5">Verify OTP</h1>
+        
+        
+        <div class="card mb-4" id="forms">
+          <div class="card-header">
+            <small>
+            Fetch OTP from your provided Email and furnish below.
+            </small>
+          </div>
+          <div class="card-body">
+
+            {% include 'partials/_messages.html' %}
+
+            <form method="post" action="{% url 'store:verify_otp' %}">
+                {% csrf_token %}
+                <label for="otp">Enter OTP:</label>
+                <input type="text" name="otp" id="otp" class="form-control">
+                <br>
+                <button type="submit" class="btn btn-primary">Verify OTP</button>
+            </form>
+            
+          </div>
+        </div>
+
+        </div>       
+      </div>
+{% endblock content %}

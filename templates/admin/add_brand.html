@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+    <div class="container">
+    <h1>Create Brand</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit">Create Brand</button>
+    </form>
+</div>
+    {% endblock content %}

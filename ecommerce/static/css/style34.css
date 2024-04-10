@@ -1,0 +1,54 @@
+/* page css */
+
+.page{
+    width: 21cm;
+    min-height: 30cm;
+    margin: 1cm auto;
+    border: 0 #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+   /* css for the word invoice  */
+#invoice-div{
+    background-color: royalblue;
+    height: 120px;
+    width: 240px;
+    border-radius: 5px;
+    margin-left: 554px;
+}
+#invoice{
+  font-size: 50px;
+  position: relative;
+  top: 20px;
+}
+body{
+  background-color: rgba(160, 114, 41, 0.589);
+}
+/* glowing the word invoice at top right of the page  */
+.glow {
+    font-size: 90px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fd0202, 0 0 7px #fd0202, 0 0 8px #fd0202, 0 0 9px #fd0202, 0 0 10px #fd0202;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 6px #ff04d5, 0 0 7px #ff04d5, 0 0 8px #ff04d5, 0 0 9px #ff04d5, 0 0 10px #ff04d5, 0 0 11px #ff04d5;
+    }
+  }
+/* paragraph written in terms and conditions.*/
+#para1{
+  border: none;
+  width: 400px;
+  height: 80px;
+  text-align: justify;
+  position: relative;
+  left: 60px;
+}
